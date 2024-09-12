@@ -1,0 +1,11 @@
+.base-pd{
+    padding:0px 40px;
+}
+@media screen and (max-width: 750px) {
+    .base-pd{
+        padding:0px 20px;
+    }
+  } 
+.none{
+    display: none !important;
+}

@@ -1,0 +1,173 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+.custom-select {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg aria-hidden='true' xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 10 6'%3E%3Cpath stroke='%236B7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m1 1 4 4 4-4'/%3E%3C/svg%3E");
+  background-position: right 0.75rem center;
+  background-repeat: no-repeat;
+  background-size: 0.75em 0.75em;
+  padding-right: 2.5rem;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+
+.custom-scroll-y::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scroll-y::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+  border-radius: 10px;
+}
+ 
+.custom-scroll-y::-webkit-scrollbar-thumb {
+  background: #888; 
+  border-radius: 10px;
+
+}
+
+.custom-scroll-y::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+  border-radius: 10px;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+    appearance: textfield
+}
+
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+:root {
+  --color-df-1: #02093d;
+  --color-df-2: #df1a1a;
+  --color-layer-2: #d51515;
+  --color-layer-line:rgba(2, 9, 61,0.3);
+  --color-df-3: white;
+  --color-tx-1: #0f164c;
+  --color-tx-2: #999dc5;
+  --color-bg-chat:rgb(233, 241, 254);
+}
+
+.container-base {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.slide-base {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.container-cs {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--color-df-2);
+}
+.container-cs:before,
+.container-cs:after {
+  content: "";
+  width: 60vmax;
+  height: 60vmax;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.2);
+  left: -20vmin;
+  top: -20vmin;
+  animation: morph 15s linear infinite alternate, spin 20s linear infinite;
+  z-index: 1;
+  will-change: border-radius, transform;
+  transform-origin: 55% 55%;
+  pointer-events: none;
+}
+
+.container-cs:after {
+  width: 70vmin;
+  height: 70vmin;
+  left: auto;
+  right: -10vmin;
+  top: auto;
+  bottom: 0;
+  animation: morph 10s linear infinite alternate,
+    spin 26s linear infinite reverse;
+  transform-origin: 20% 20%;
+}
+.caption-tx {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #676767;
+  margin-bottom: 16px;
+  margin-top: 8px;
+}
+.messageR, .messageL{
+  border-radius: 18px;
+  max-width: 160px;
+  margin-bottom: 4px;
+  padding: 8px 12px;
+}
+
+.messageL{
+  width: max-content;
+  color:#000;
+  background-color: #e4e6eb;
+}
+
+.messageR{
+  width: max-content;
+  color: #fff;
+  background-color: #0084ff;
+}
+.EmojiPickerReact{
+  position: absolute !important;
+  bottom: 50px;
+  right: 50px;
+  width: 260px !important;
+  height: 350px !important;
+}
+.EmojiPickerReact .Flex.FlexRow{
+  display: none !important;
+}
+.text-18-500{
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+  color: #333333;
+}
+@keyframes morph {
+  0% {
+    border-radius: 40% 60% 60% 40%/70% 30%;
+  }
+
+  to {
+    border-radius: 40% 60%;
+  }
+}
+@keyframes spin {
+  to {
+    transform: rotate(1turn);
+  }
+}

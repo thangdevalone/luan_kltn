@@ -1,0 +1,29 @@
+.header-sd{
+    background-image: -webkit-gradient(linear,left top,left bottom,from(rgba(0, 0, 0, 0.15)),to(transparent));
+    background-image: linear-gradient(180deg,rgba(0, 0, 0, 0.25) 0%,rgba(0, 0, 0, 0.2) 50%,transparent 100%);
+}
+.header-color{
+    background-color: var(--color-layer-2);
+    box-shadow:0px 12px 12px -6px rgba(247,0,0,0.45);
+}
+.header-unset{
+    box-shadow:0 4px 2px -2px rgba(0, 0, 0, 0.2);
+}
+.ani-bg{
+    transition: all 0.2s;
+}
+.mobile-cart{
+    position: fixed;
+    z-index: 10;
+    width: max-content;
+    bottom:20px;
+    right:20px;
+    
+}
+.mobile-cart button{
+    background-color: var(--color-layer-2) !important;
+}
+.cart{
+    position: relative;
+    width: max-content;
+}
